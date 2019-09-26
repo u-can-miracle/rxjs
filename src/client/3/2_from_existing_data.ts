@@ -1,19 +1,6 @@
 import { Observable, of, from, fromEvent, concat } from 'rxjs'
 import { allBooks, allReaders } from '../mocks/data'
-
-interface IBook {
-	bookId: number
-	title: string
-	author: string
-	publicationYear: number
-}
-
-interface IReader {
-	readerId: number
-	name: string
-	weeklyReadingGoaL: number
-	totalMinutesRead: number
-}
+import { IReader, IBook } from '../interface'
 
 const source1$ = of('hello', 0, true, allReaders[0].name)
 
